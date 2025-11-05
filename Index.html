@@ -1,0 +1,1022 @@
+<html> 
+    <head>
+        <link rel="stylesheet" href="./index.css">
+    </head>
+    <body>
+        <header>
+            <p>IPL CHAMPIONS</p>
+            <img width="400px" src="Icons/Untitled-3 copy.png" alt="">
+            <span class = "year" >'13 '15 '17 '19 '20 </span><span class = "clt">CLT20 CHAMPIONS</span>
+            <img class = "img" width="400px" src="Icons/trophy.png" alt="">
+            <span>'11 '13' </span><span class = "clt">WPL CHAMPIONS</span>
+            <img width="400px" src="Icons/Trophy2.png" alt="">
+            <span class = "year1"> '23' 25</span>
+            <span class = "com">minicricket.com</span>
+            <div class="line"></div>
+            <span class = "com1">micapetown.co.za</span>
+            <div class="line1"></div> 
+            <span class = "com2">miemirates.com</span>
+            <div class="lang">
+                <a href="#">English</a>
+                <a href="#">Hindi</a>
+                <a href="#">Telugu</a>
+                </div>
+            </div>
+            <div class="line2">
+            </div>
+            <span class="Shop">MI Shop</span>
+            <div class="membership">
+                 Menbership
+            </div>
+                <div class="sign">
+                    Sign in
+                </div>
+
+        </header>
+        <div class="logo">
+                <img src="Images/mumbaiindians .png" alt="">
+                <div class="text">
+                    <ul id="main" type = "none">
+                        <li><a href="#">HOME </a></li>
+                        <li><a href="#">FIXTURES</a></li>
+                        <li><a href="#">MITV</a></li>
+                        <li><a href="#">SQUAD</a></li>
+                        <li><a href="#">LATEST UPDATES</a></li>
+                        <li><a href="#">ESA</a></li>
+                        <li><a href="#">GALLERY</a></li>
+                        <li><a href="#">MI STATS</a></li>
+                        <li class="menu" style="font-size:30px;">☰</li>
+                        <li>SEARCH</li>
+                    </ul>
+
+                    <span><img class="icon" src="Icons/search icon.png" alt=""></span>
+                    
+                </div>
+        </div>
+        <nav></nav>
+        <div class="image"></div>
+        <section id="team">
+                <img src="Images/poster.png" onclick="change_pic()" id="pic1">
+                <div id="dots"></div>
+        </section>
+
+
+        <script>
+                const totalImages = 5;
+                const dotsContainer = document.getElementById("dots");
+
+                for(let j = 0; j < totalImages; j++)
+                {
+                    const dot = document.createElement("span");
+                    dot.addEventListener("click", () => 
+                    {
+                        i = j + 0;      
+                        change_pic();
+                    });
+                        dotsContainer.appendChild(dot);
+                }
+
+                function updateDots() 
+                {
+                    const allDots = dotsContainer.querySelectorAll("span");
+                    allDots.forEach((dot, index) => 
+                    {
+                        dot.classList.toggle("active", index === (i - 1));
+                    });
+                }
+    
+                let i = 1;
+
+                function change_pic() {
+                        const pic = document.getElementById("pic1");
+
+                        if (i === 1) 
+                        {
+                            pic.src = "Images/poster.png";
+                            i = 2;
+                        }                     
+                        else if (i === 2) 
+                        {
+                            pic.src = "Images/poster1.png";
+                            i = 3;
+                        }                     
+                        else if (i === 3) 
+                        {
+                            pic.src = "Images/poster2.png";
+                            i = 4;
+                        }                     
+                        else if (i === 4) 
+                        {
+                            pic.src = "Images/poster3.png";
+                            i = 5;
+                        }                     
+                        else 
+                        {
+                            pic.src = "Images/poster4.png";
+                            i = 1;
+                        }
+                        updateDots();
+                }
+                        setInterval(change_pic, 10000);
+                        updateDots();
+        </script> 
+        <div class="heading">
+            <h2>FIXTURES</h2>
+            <p class = "onn">Men's Team</p> 
+                <span class="toggle" onclick="toggleTeam()">
+        <span class="circle"></span>
+    </span>
+            <p class = "onnp">Women's Team </p>
+            <p class = "onnp1">View More ></p>
+            <div class="fixtures-wrapper">
+                <div class="fixtures-row">
+                    <div class="box">
+                        <div id="text">MATCH 69,<span class="num"> 26 </span>MAY, 2025</div>
+                        <img class="punjab" src="Icons/punjab2.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                                    KINGS
+                        </span>
+                        <span class="pscore">187/3</span>
+                        <span class="pscore1">(18.3 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">184/7</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Punjab Kings beat Mumbai Indians by 7 wickets</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                    <div class="box1">
+                        <div id="text">ELIMINATOR<span class="num"> 30 </span>MAY, 2025</div>
+                        <img class="punjab" src="Icons/gujarat.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                        KINGS
+                        </span>
+                        <span class="pscore">208/6</span>
+                        <span class="pscore1">(20.0 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">228/5</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Mumbai Indians beat Gujarat Titans by 20 Runs</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                    <div class="box2">
+                        <div id="textb">QUALIFIER 2,<span class="num"> 1 </span>JUNE, 2025</div>
+                        <img class="punjab" src="Icons/punjab2.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                        KINGS
+                        </span>
+                        <span class="pscore">207/5</span>
+                        <span class="pscore1">(19.0 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">203/6</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Punjab Kings beat Mumbai Indians by 5 wickets</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                    <div class="box3">
+                        <div id="text">MATCH 69,<span class="num"> 26 </span>MAY, 2025</div>
+                        <img class="punjab" src="Icons/punjab2.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                        KINGS
+                        </span>
+                        <span class="pscore">187/3</span>
+                        <span class="pscore1">(18.3 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">184/7</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Punjab Kings beat Mumbai Indians by 7 wickets</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                    <div class="box4">
+                        <div id="text">ELIMINATOR<span class="num"> 30 </span>MAY, 2025</div>
+                        <img class="punjab" src="Icons/gujarat.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                        KINGS
+                        </span>
+                        <span class="pscore">208/6</span>
+                        <span class="pscore1">(20.0 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">228/5</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Mumbai Indians beat Gujarat Titans by 20 Runs</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                    <div class="box5">
+                        <div id="textb">QUALIFIER 2,<span class="num"> 1 </span>JUNE, 2025</div>
+                        <img class="punjab" src="Icons/punjab2.png" alt="">
+                        <span class="punjabtext">PUNJAB <br>
+                        KINGS
+                        </span>
+                        <span class="pscore">207/5</span>
+                        <span class="pscore1">(19.0 overs)</span>
+                        <div class="pgradient"></div>
+                        <img class="mumbai" src="Icons/mumbai.png" alt="">
+                        <span class="mumbaitext">MUMBAI <br> INDIANS</span>
+                        <span class="mscore">203/6</span>
+                        <span class="mscore1">(20.0 overs)</span>
+                        <span class="winner">Punjab Kings beat Mumbai Indians by 5 wickets</span>
+                        <button class="mbutton" type = "button">Matchcenter</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            let moved = false;
+
+            function toggleTeam() 
+            {
+                const row = document.querySelector('.fixtures-row');
+                const toggle = document.querySelector('.toggle');
+
+            if (!moved) 
+            {
+                row.style.transform = "translateX(-1600px)";
+            }             
+            else 
+            {
+                row.style.transform = "translateX(0)";
+            }
+
+                toggle.classList.toggle("active");
+                moved = !moved;
+            }
+
+</script>
+
+
+        <div class = "video"> 
+
+          <img src="Logos/tv.png"> 
+            <button class="vbutton">Watch More
+            </button>
+            <img src="Logos/mumbaiindians.png" alt="">       
+           <div class="video-slider">
+                <video src="Videos/videoplayback (1) (1).mp4" controls></video>
+                <video src="Videos/videoplayback (2) (1).mp4" controls></video>
+                <video src="Videos/videoplayback (3) (1).mp4" controls></video>
+                <video src="Videos/videoplayback (4) (1).mp4" controls></video>
+                <video src="Videos/videoplayback (5).mp4" controls></video>
+            </div>  
+            <div class="dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+            </div> 
+        
+            <script>
+                const slider = document.querySelector(".video-slider");
+                const slides = document.querySelectorAll(".video-slider video");
+                const dots = document.querySelectorAll(".dot");
+
+                let currentIndex = 0;
+
+                function updateSlider() 
+                {
+                    let slideWidth = slides[0].offsetWidth + 40;
+
+                    slider.style.transform = `translateX(calc(50% - ${slideWidth * currentIndex + slideWidth / 2}px))`;
+
+                    slides.forEach(slide => slide.classList.remove("active"));
+                    dots.forEach(dot => dot.classList.remove("active"));
+
+                    slides[currentIndex].classList.add("active");
+                    dots[currentIndex].classList.add("active");
+                }
+
+                    dots.forEach((dot, index) => 
+                {
+                    dot.addEventListener("click", () => 
+                {
+                    currentIndex = index;
+                    updateSlider();
+                });
+            });
+
+                updateSlider();
+        </script>
+    <div class="players">
+        <span class="ctext">SQUAD</span>
+        <p class = "onn">Men's Team</p> 
+                <span class="toggle1" onclick="toggleTeam()">
+        <span class="circle"></span>
+    </span>
+            <p class = "onnp">Women's Team </p>
+            <p class = "onnp1">View More ></p>
+
+        <div class="players-slide">
+            <div class="player1">
+                <img id="captainha" src="Logos/captain.png" alt="">
+                <img class="plist" src="Images/Hardik.png" alt="">
+                <div class="pgrad"></div>
+                <span id="player1">HARDIK<br>PANDYA </span>
+                <span id="player1s">ALL-ROUNDER </span>
+            </div>
+            <div class="player2">
+                <img class="plist" src="Images/Ghazanfar2.png" alt="">
+                <div class="pgrad2"></div> 
+                <span id="player2">AW<br>GHAZANFAR </span>
+                <span id="player2s">BOWLER </span>
+            </div>
+            <div class="player3"> 
+                <img class="plist" src="Images/Arjun.png" alt=""> 
+                <div class="pgrad3"></div> 
+                <span id="player3">ARJUN<br>TENDULKAR </span>
+                <span id="player3s">BOWLER </span>
+            </div>
+            <div class="player4">
+                <img class="plist" src="Images/aswahani.png" alt="">
+                <div class="pgrad4"></div> 
+                <span id="player4">ASHWANI<br>KUMAR </span>
+                <span id="player4s">BOWLER </span>
+            </div>
+            <div class="player5">
+                <img class="plist" src="Images/jacobs.png" alt="">
+                <div class="pgrad5"></div> 
+                <span id="player5">BEVON-JHON<br>JACOBS </span>
+                <span id="player5s">ALL-ROUNDER </span>
+            </div>
+            <div class="player6">
+                <img class="plist" src="Images/aswahani.png" alt="">
+                <div class="pgrad6"></div> 
+                <span id="player6">CHARITH<br>ASALANKA </span>
+                <span id="player6s">ALL-ROUNDER </span>
+            </div>
+            <div class="player7">
+                <img class="plist" src="Images/corbin.png" alt="">
+                <div class="pgrad7"></div> 
+                <span id="player7">CORBIN<br>BOSCH </span>
+                <span id="player7s">ALL-ROUNDER </span>
+            </div>
+            <div class="player8">
+                <img class="plist" src="Images/deepak.png" alt="">
+                <div class="pgrad8"></div> 
+                <span id="player8">DEEPAK<br>CHAHAR </span>
+                <span id="player8s">ALL-ROUNDER </span>
+            </div>
+            <div class="player9">
+                <img class="plist" src="Images/bumrah.png" alt="">
+                <div class="pgrad9"></div> 
+                <span id="player9">JASPRIT<br>BUMRAH </span>
+                <span id="player9s">BOWLER</span>
+            </div>
+            <div class="player10">
+                <img class="plist" src="Images/jonny.png" alt="">
+                <div class="pgrad10"></div> 
+                <span id="player10">JONNY<br>BAIRSTOW </span>
+                <span id="player10s">WICKET-KEEPER</span>
+            </div>
+            <div class="player11">
+                <img class="plist" src="Images/karn.png" alt="">
+                <div class="pgrad11"></div> 
+                <span id="player11">KARN<br>SHARMA </span>
+                <span id="player11s">BOWLER </span>
+            </div>
+            <div class="player12">
+                <img class="plist" src="Images/williams.png" alt="">
+                <div class="pgrad12"></div> 
+                <span id="player12">LIZAAD<br>WILLIAMS </span>
+                <span id="player12s">BOWLER</span>
+            </div>
+            <div class="player13">
+                <img class="plist" src="Images/Mitcheel.png" alt="">
+                <div class="pgrad13"></div> 
+                <span id="player13">MITCHEEL<br>SANTNER </span>
+                <span id="player13s">ALL-ROUNDER </span>
+            </div>
+            <div class="player14">
+                <img class="plist" src="Images/Mujeeb.png" alt="">
+                <div class="pgrad14"></div> 
+                <span id="player14">MUJEEB<br>UR RAHMAN </span>
+                <span id="player14s">BOWLER</span>
+            </div>
+            <div class="player15">
+                <img class="plist" src="Images/Naman.png" alt="">
+                <div class="pgrad15"></div> 
+                <span id="player15">NAMAN<br>DHIR </span>
+                <span id="player15s">ALL-ROUNDER </span>
+            </div>
+            <div class="player16">
+                <img class="plist" src="Images/Raghu sharma.png" alt="">
+                <div class="pgrad16"></div> 
+                <span id="player16">RAGHU<br>SHARMA </span>
+                <span id="player16s">BOWLER</span>
+            </div>
+            <div class="player17">
+                <img class="plist" src="Images/Raj angad.png" alt="">
+                <div class="pgrad17"></div> 
+                <span id="player17">RAJ<br>ANGAD BAWA </span>
+                <span id="player17s">ALL-ROUNDER </span>
+            </div>
+            <div class="player18">
+                <img class="plist" src="Images/Reece.png" alt="">
+                <div class="pgrad18"></div> 
+                <span id="player18">REECE<br>TOPLEY </span>
+                <span id="player18s">BOWLER</span>
+            </div>
+            <div class="player19">
+                <img class="plist" src="Images/Richard.png" alt="">
+                <div class="pgrad19"></div> 
+                <span id="player19">RICHARD<br>GLEESON </span>
+                <span id="player19s">BOWLER</span>
+            </div>
+            <div class="player20">
+                <img class="plist" src="Images/Robin.png" alt="">
+                <div class="pgrad20"></div> 
+                <span id="player20">ROBIN<br>MIZZ </span>
+                <span id="player20s">WICKET-KEEPER</span>
+            </div>
+            <div class="player21">
+                <img class="plist" src="Images/Rohit sharma.png" alt="">
+                <div class="pgrad21"></div> 
+                <span id="player21">ROHIT<br>SHARMA </span>
+                <span id="player21s">BATTER</span>
+            </div>
+            <div class="player22">
+                <img class="plist" src="Images/Ryan.png" alt="">
+                <div class="pgrad22"></div> 
+                <span id="player22">RYAN<br>RICKELTON </span>
+                <span id="player22s">WICKET-KEEPER</span>
+            </div>
+            <div class="player23">
+                <img class="plist" src="Images/Shrijith.png" alt="">
+                <div class="pgrad23"></div> 
+                <span id="player23">SHRIJITH<br>KRISHNAN </span>
+                <span id="player23s">WICKET-KEEPER</span>
+            </div>
+            <div class="player24">
+                <img class="plist" src="Images/Suryakumar.png" alt="">
+                <div class="pgrad24"></div> 
+                <span id="player24">SURYA KUMAR<br>YADAV </span>
+                <span id="player24s">BATTER</span>
+            </div>
+            <div class="player25">
+                <img class="plist" src="Images/Tilak varma.png" alt="">
+                <div class="pgrad25"></div> 
+                <span id="player25">TILAK<br>VARMA </span>
+                <span id="player25s">BATTER</span>
+            </div>
+            <div class="player26">
+                <img class="plist" src="Images/TrentBoult.png" alt="">
+                <div class="pgrad26"></div> 
+                <span id="player26">TRENT<br>BOULT </span>
+                <span id="player26s">BATTER</span>
+            </div>
+            <div class="player27">
+                <img class="plist" src="Images/Venkata.png" alt="">
+                <div class="pgrad27"></div> 
+                <span id="player27">VENKATA<br>SATHYANARAYANA PENMETSA </span>
+                <span id="player27s">BATTER</span>
+            </div>
+            <div class="player28">
+                <img class="plist" src="Images/Vignesh.png" alt="">
+                <div class="pgrad28"></div> 
+                <span id="player28">VIGNESH<br>PUTHUR </span>
+                <span id="player28s">BATTER</span>
+            </div>
+            <div class="player29">
+                <img class="plist" src="Images/WillJacks.png" alt="">
+                <div class="pgrad29"></div> 
+                <span id="player29">WILL<br>JACKS</span>
+                <span id="player29s">ALL-ROUNDER</span>
+            </div>
+        </div>
+
+    </div>
+    </div>
+        <div class="dots1">
+            <span class="dot" onclick="scrollToPage(0)"></span>
+            <span class="dot" onclick="scrollToPage(1)"></span>
+            <span class="dot" onclick="scrollToPage(2)"></span>
+            <span class="dot" onclick="scrollToPage(3)"></span>
+            <span class="dot" onclick="scrollToPage(4)"></span>
+            <span class="dot" onclick="scrollToPage(5)"></span>
+        </div>
+
+        <script>
+            const slide = document.querySelector('.players-slide');
+            const dots1 = document.querySelectorAll('.dot');
+            let currentPage = 0;
+
+            function scrollToPage(pageIndex) {
+            const viewportWidth = 1520; 
+            const newPosition = viewportWidth * pageIndex;
+            slide.style.transform = `translateX(-${newPosition}px)`;
+
+            dots.forEach(dot => dot.classList.remove('active'));
+            dots[pageIndex].classList.add('active');
+
+            currentPage = pageIndex;
+    }
+
+            dots[0].classList.add('active');
+        </script>
+
+        <div class="updates">
+            <span id="update">LATEST UPDATES</span>
+            <p class = "onnp1">View More ></p>
+
+            <div id="box1">
+                <img class="b1image1" src="Images/teamplayers.png" alt="">
+                <div id="b1imgtext">
+                    <span id="b1text">23 OCT, 2025</span>
+                    <span id="b1text1">AUSvIND, 2nd ODI: A Fight to the end, but a tough loss :(</span>
+                </div>
+                    <img class="b1icon1" src="Icons/hearticon.png" alt="">
+                    <img class="b1icon2" src="Icons/heartbreakicon.png" alt="">
+                    <img class="b1icon3" src="Icons/thumbsupicon.png" alt="">
+                    <span class="b1number">10</span>
+                    <span class="b1lines"></span>
+                    <img class="b1icon4" src="Icons/shareicon.png" alt="">
+                    <span class="b1number1">Share</span>
+                    <input id="b1text2" type="text" placeholder="Write a comment, and hit enter">
+
+            </div>
+            <div id="box2">
+                <img class="b2image2" src="Images/womensteam.png" alt="">
+                <div id="b1imgtext">
+                    <span id="b1text">24 OCT, 2025</span>
+                    <span id="b1text1">Yes, Yes, Yes!! Harmans Girls ensure a thumping entry into the semis</span>
+                </div>
+                    <img class="b1icon1" src="Icons/hearticon.png" alt="">
+                    <img class="b1icon2" src="Icons/heartbreakicon.png" alt="">
+                    <img class="b1icon3" src="Icons/thumbsupicon.png" alt="">
+                    <span class="b1number">10</span>
+                    <span class="b1lines"></span>
+                    <img class="b1icon4" src="Icons/shareicon.png" alt="">
+                    <span class="b1number1">Share</span>
+                    <input id="b1text2" type="text" placeholder="Write a comment, and hit enter"> 
+                </div>  
+
+            </div>
+            <div id="box3">
+               <img class="b3image" src="Images/teamplayers2.png" alt="">
+               <div id="b3imgtext">
+                    <span id="b3text">20 OCT, 2025</span>
+                    <span id="b3text1">Happy Diwali, Paltan!! Fireworks Galore ft.Boys in Blue and Gold</span>
+                </div>
+                    <img class="b3icon1" src="Icons/hearticon.png" alt="">
+                    <img class="b3icon2" src="Icons/heartbreakicon.png" alt="">
+                    <img class="b3icon3" src="Icons/thumbsupicon.png" alt="">
+                    <span class="b3number">10</span>
+                    <img class="b3icon4" src="Icons/shareicon.png" alt="">
+                    <span class="b3number1">Share</span>
+                    <span class="b3line"></span>
+                    <img class="b3defaultimg" src="Images/defaultimage.png" alt="">
+                    <div id="b3dimgtext">
+                        <span id="b3text3">Vyom Ketan Bhagat</span><br>
+                        <span id="b3text3">skyshot is sky</span>
+                    </div>
+                    <img class="b3defaultimg1" src="Images/defaultimage1.png" alt="">
+                    <div id="b3dimgtext1">
+                        <span id="b3text4">Swastik Bhattacharya</span><br>
+                        <img id="leftaicon" src="../Icons/leftarrowicon.png" alt="">
+                        <div id="allicons">
+                                <img class="allicon1" src="Icons/hearticon.png" alt="">
+                                <img class="allicon2" src="Icons/heartbreakicon.png" alt="">
+                                <img class="allicon3" src="Icons/thumbsupicon.png" alt="">
+                        </div>
+                        <span id="b3text4">Hard-hitting clutch pandya is my favourite playeer</span>
+                        <img id="b3img" src="../Icons/100icon.png" alt="">
+                        <img id="leftaicon1" src="../Icons/leftarrowicon1.png" alt="">
+                        <div id="allicons1">
+                                <img class="allicon1" src="Icons/hearticon.png" alt="">
+                                <img class="allicon2" src="Icons/heartbreakicon.png" alt="">
+                                <img class="allicon3" src="Icons/thumbsupicon.png" alt="">
+                        </div>
+                    </div>
+                    <input id="b3text2" type="text" placeholder="Write a comment, and hit enter"> 
+                </div>
+
+            </div>
+        </div>
+
+        <div class="stats">
+            <h1 id="stext">STATS</h1>
+             <p class = "onns1">Men's Team</p> 
+                <span class="toggle2" onclick="toggleTeam()">
+        <span class="circle"></span>
+    </span>
+            <p class = "onnpp">Women's Team </p>
+            <p class = "onnp2">View More ></p>
+            <span class = "onns2">STANDINGS</span>
+             <p class = "onns3">Men's Team</p> 
+                <span class="toggle3" onclick="toggleTeam()">
+        <span class="circle"></span>
+    </span>
+            <p class = "onnpp1">Women's Team </p>
+            <div id="stats1">
+                <span id="stext1">TOP RUN-SCORER</span>
+                <img class="slist" src="Images/Suryakumar.png" alt="">
+                <div class="sgrad24"></div> 
+                <span id="slayer24">SURYA KUMAR</span>
+                <span id="stext2">YADAV</span>
+                <span id="slayer24s">717</span>
+            </div>
+            <div class="smatches">
+                <span class="smatchestext">16 MATCHES PLAYED</span>
+                <img class="smatchesimg" src="Images/pichart.png" alt="">
+                <div id="square"></div>
+                <span id="squaretext">9</span>
+                <span id="squaretext1">WON</span>
+                <div id="square1"></div>
+                <span id="squaretext2">0</span>
+                <span id="squaretext3">TIE</span>
+                <div id="square2"></div>
+                <span id="squaretext4">7</span>
+                <span id="squaretext5">LOST</span>
+                <div class="smatch"></div>
+                <img class="smatchimg" src="Images/batting.png" alt="">
+                <span id="runs">TOTAL RUNS SCORED</span>
+                <span id="runs1">2912</span>
+                <span id="smatch1"></span>
+                <img class="smatchimg1" src="Images/wickets.png" alt=""> 
+                <span id="runs2">TOTAL WICKETS TAKEN</span>
+                <span id="runs3">116</span>   
+            </div>
+            <div id="stats2">
+                <span id="stext3">TOP WICKET-TACKER</span>
+                <img class="slist1" src="Images/TrentBoult.png" alt="">
+                <div class="sgrad241"></div> 
+                <span id="slayer241">TRENT</span>
+                <span id="stext4">BOULT</span>
+                <span id="slayer241s">22</span>
+            </div> 
+            <div class="standings">
+                <div class="shead">
+                <ul id="slists">
+                    <li>Teams</li>
+                    <li>PLD</li>
+                    <li>W</li> 
+                    <li>L</li>
+                    <li>N/R</li>
+                    <li>Net/RR</li>
+                    <li>Pts</li>
+                </ul>
+                </div>
+                <div class="shead1">
+                <ul id="slists1">
+                    <li><img src="Icons/CSK.png" alt=""></li>
+                    <li>14</li>
+                    <li>9</li> 
+                    <li>4</li>
+                    <li>1</li>
+                    <li>+0.372</li>
+                    <li>19</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead2">
+                <ul id="slists2">
+                    <li><img src="Icons/RCB.png" alt=""></li>
+                    <li>14</li>
+                    <li>9</li> 
+                    <li>4</li>
+                    <li>1</li>
+                    <li>+0.301</li>
+                    <li>19</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead3">
+                <ul id="slists3">
+                    <li><img src="Icons/gujarat.png" alt=""></li>
+                    <li>14</li>
+                    <li>9</li> 
+                    <li>5</li>
+                    <li>0</li>
+                    <li>+0.254</li>
+                    <li>18</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="standline3"></div>
+                <div class="shead4">
+                <ul id="slists4">  
+                    <li><img src="Icons/mumbai.png" alt=""></li>
+                    <li>14</li>
+                    <li>8</li> 
+                    <li>6</li>
+                    <li>0</li>
+                    <li>+1.142</li>
+                    <li>16</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead5">
+                <ul id="slists5">
+                    <li><img src="Icons/DelhiCapitals.png" alt=""></li>
+                    <li>14</li>
+                    <li>7</li> 
+                    <li>6</li>
+                    <li>1</li>
+                    <li>+0.011</li>
+                    <li>15</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead6">
+                <ul id="slists6">
+                    <li><img src="Icons/sunrisers.png" alt=""></li>
+                    <li>14</li>
+                    <li>6</li> 
+                    <li>7</li>
+                    <li>1</li>
+                    <li>-0.241</li>
+                    <li>13</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead7">
+                <ul id="slists7">
+                    <li><img src="Icons/Lucknow.png" alt=""></li>
+                    <li>14</li>
+                    <li>6</li> 
+                    <li>8</li>
+                    <li>0</li>
+                    <li>-0.376</li>
+                    <li>12</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead8">
+                <ul id="slists8">
+                    <li><img src="Icons/KnightRiders.png" alt=""></li>
+                    <li>14</li>
+                    <li>5</li> 
+                    <li>7</li>
+                    <li>2</li>
+                    <li>-0.305</li>
+                    <li>12</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead9">
+                <ul id="slists9">
+                    <li><img src="Icons/RR.png" alt=""></li>
+                    <li>14</li>
+                    <li>4</li> 
+                    <li>10</li>
+                    <li>0</li>
+                    <li>-0.549</li>
+                    <li>8</li>
+                </ul>
+                </div>
+                <div class="standline"></div> 
+                <div class="shead10">
+                <ul id="slists10">
+                    <li><img src="Icons/punjab2.png" alt=""></li>
+                    <li>14</li>
+                    <li>4</li> 
+                    <li>10</li>
+                    <li>0</li>
+                    <li>-0.647</li>
+                    <li>8</li>
+                </ul>
+                </div>
+                <div class="standline"></div>
+                <div class="standline2"></div> 
+            </div>
+        </div>
+        <div class="gallery">
+            <span class="ghtext">GALLERY</span>
+            <p class = "onng1">View More ></p>
+            <div id="gbox">
+                <div id="gimgtext">
+                    <span id="gtext">20 OCT, 2025</span>
+                    <span id="gtext1">IPL 2025 | Qualifire 2 | PBKS vs MI - Photo album</span>
+                    <span id="gtext5">Here are the snapshots from our Qualifire 2 fixture against the Punjab...</span>
+                </div>
+                    <img class="gicon1" src="Icons/hearticon.png" alt="">
+                    <img class="gicon2" src="Icons/heartbreakicon.png" alt="">
+                    <img class="gicon3" src="Icons/thumbsupicon.png" alt="">
+                    <span class="gnumber">10</span>
+                    <img class="gicon4" src="Icons/shareicon.png" alt="">
+                    <span class="gnumber1">Share</span>
+                    <span class="gline"></span>
+                    <img class="gdefaultimg" src="Images/defaultimage.png" alt="">
+                    <div id="gdimgtext">
+                        <span id="gtext3">Vyom Ketan Bhagat</span><br>
+                        <span id="gtext3">skyshot is sky</span>
+                    </div>
+                    <img class="gdefaultimg1" src="Images/defaultimage1.png" alt="">
+                    <div id="gdimgtext1">
+                        <span id="gtext4">Swastik Bhattacharya</span><br>
+                        <img id="gleftaicon" src="Icons/leftarrowicon.png" alt="">
+                        <div id="gallicons">
+                                <img class="gallicon1" src="Icons/hearticon.png" alt="">
+                                <img class="gallicon2" src="Icons/heartbreakicon.png" alt="">
+                                <img class="gallicon3" src="Icons/thumbsupicon.png" alt="">
+                        </div>
+                        <span id="gtext4">Hard-hitting clutch pandya is my favourite playeer</span>
+                        <img id="gimg" src="Icons/100icon.png" alt="">
+                        <img id="gleftaicon1" src="Icons/leftarrowicon1.png" alt="">
+                        <div id="gallicons1">
+                                <img class="gallicon1" src="Icons/hearticon.png" alt="">
+                                <img class="gallicon2" src="Icons/heartbreakicon.png" alt="">
+                                <img class="gallicon3" src="Icons/thumbsupicon.png" alt="">
+                        </div>
+                    </div>
+                    <input id="gtext2" type="text" placeholder="Write a comment, and hit enter">
+                    </div>
+                    <div class="imagecoursoul" >
+                        <img class="imgc" src="Images/imagec.png" alt="" id="image">
+                    </div>
+                     <div id="countBox" class="counter">
+                        1 / 11
+                    </div>
+                    <script>
+                        j = 1;
+                        total = 11;
+
+                        function pictures()
+                        {
+                            var pic = document.getElementById("image");
+                            var countBox = document.getElementById("countBox");
+                            if(j==1)
+                            {
+                                pic.src = "Images/imagec.png";
+                                j=2;
+                            }
+                            else if (j==2)
+                            {
+                                pic.src = "Images/imagec1.png";
+                                j=3;
+                            }
+                            else if (j==3)
+                            {
+                                pic.src = "Images/imagec2.png";
+                                j=4;
+                            }
+                            else if (j==4)
+                            {
+                                pic.src = "Images/imagec3.png";
+                                j=5;
+                            }
+                            else if (j==5)
+                            {
+                                pic.src = "Images/imagec4.png";
+                                j=6;
+                            }
+                            else if (j==6)
+                            {
+                                pic.src = "Images/imagec5.png";
+                                j=7;
+                            }
+                            else if (j==7)
+                            {
+                                pic.src = "Images/imagec6.png";
+                                j=8;
+                            }
+                            else if (j==8)
+                            {
+                                pic.src = "Images/imagec7.png";
+                                j=9;
+                            }
+                            else if (j==9)
+                            {
+                                pic.src = "Images/imagec8.png";
+                                j=10;
+                            }
+                            else if (j==10)
+                            {
+                                pic.src = "Images/imagec9.png";
+                                j=11;
+                            }
+                            else if (j==11)
+                            {
+                                pic.src = "Images/imagec10.png";
+                                j=1;
+                            }
+                            countBox.textContent = (j == 1 ? total : j - 1) + " / " + total;
+                        }
+
+                    setInterval(pictures, 1000);
+
+        </script>
+                <div class="logos">
+                        <span id="logopatner">MEN'S TEAM PATNERS</span>
+                        <span id="logopatnerw">WOMENS'S TEAM PATNERS</span>
+                        <div class="logoline"></div>
+                        <span id="logopatner1">PRINCIPAL PATNERS</span>
+                        <img id="logoimg1" src="Logos/knudsen.png" alt="">
+                        <img id="logoimg2" src="Logos/DHL.png" alt="">
+                        <div class="logoline1"></div>
+                        <div class="logoline2"></div>
+                        <div class="logoline3"></div>
+                        <span id="logopatner2">PRINCIPAL PATNERS</span>
+                        <img id="logoimg3" src="Logos/lotusherbals.png" alt="">
+                        <img id="logoimg4" src="Logos/ashokleyland.png" alt="">
+                        <div class="logoline4"></div>
+                        <span id="logopatner3">ASSOCIATE SPONSER</span>
+                        <img id="logoimg5" src="Logos/jio.png" alt="">
+                        <div class="logoline5"></div>
+                        <div class="logoline6"></div>
+                        <div class="logoline7"></div>
+                        <span id="logopatner4">ASSOCIATE PATNERS</span>
+                        <img id="logoimg6" src="Logos/rexona.png" alt="">
+                        <img id="logoimg7" src="Logos/skechers.png" alt="">
+                        <span id="logopatner5">ASSOCIATE PATNERS</span>
+                        <div class="logoline8"></div>
+                        <img id="logoimg8" src="Logos/idfcbank.png" alt="">
+                        <img id="logoimg9" src="Logos/skechers.png" alt="">
+                        <img id="logoimg10" src="Logos/astralpipes.png" alt="">
+                        <div class="logoline9"></div>
+                        <span id="logopatner6">OFFICIAL PATNERS</span>
+                        <img id="logoimg11" src="Logos/usha.png" alt="">
+                        <img id="logoimg12" src="Logos/DHL.png" alt="">
+                        <img id="logoimg13" src="Logos/soframysin.png" alt="">
+                        <img id="logoimg14" src="Logos/radiocity.png" alt="">
+                        <img id="logoimg15" src="Logos/fever.png" alt="">
+                        <img id="logoimg16" src="Logos/94.3radioone.png" alt="">
+                        <span id="logopatner7">OFFICIAL SPONSER</span>
+                        <img id="logoimg17" src="Logos/usha.png" alt="">
+                        <div class="logoline10"></div>
+                        <div class="logoline11"></div>
+                        <span id="logopatner8">OFFICIAL PATNERS</span>
+                        <img id="logoimg18" src="Logos/jiohotstar.png" alt="">
+                        <img id="logoimg19" src="Logos/lattafa.png" alt="">
+                        <img id="logoimg20" src="Logos/dream11.png" alt="">
+                        <img id="logoimg21" src="Logos/castrol.png" alt="">
+                        <img id="logoimg22" src="Logos/ebixcash.png" alt="">
+                        <img id="logoimg23" src="Logos/worldofhyatt.png" alt="">
+                        <img id="logoimg24" src="Logos/amulprotein.png" alt="">
+                        <img id="logoimg25" src="Logos/bisleri.png" alt="">
+                        <img id="logoimg26" src="Logos/udemy.png" alt="">
+                        <img id="logoimg27" src="Logos/kaspersry.png" alt="">
+                        <img id="logoimg28" src="Logos/s3group.png" alt="">
+                        <img id="logoimg29" src="Logos/fiatpe.png" alt="">
+                        <img id="logoimg30" src="Logos/funjiyamasolar.png" alt="">
+                        <img id="logoimg31" src="Logos/pokemon.png" alt="">
+                        <img id="logoimg32" src="Logos/chitale.png" alt="">
+                        <img id="logoimg33" src="Logos/kingfisher.png" alt="">
+                        <img id="logoimg34" src="Logos/sleepcompany.png" alt="">
+                        <img id="logoimg35" src="Logos/BKT.png" alt="">
+                        <img id="logoimg36" src="Logos/digital.png" alt="">
+                        <img id="logoimg37" src="Logos/GKTMT.png" alt="">
+                        <img id="logoimg38" src="Logos/bigantstudios.png" alt="">
+                        <img id="logoimg39" src="Logos/spinner.png" alt="">
+                        <img id="logoimg40" src="Logos/salimarpaints.png" alt="">
+                        <img id="logoimg41" src="Logos/ubershuttle.png" alt="">
+                        <img id="logoimg42" src="Logos/pretamanager.png" alt="">
+                        <img id="logoimg43" src="Logos/radiocity.png" alt="">
+                        <img id="logoimg44" src="Logos/fever.png" alt="">
+                        <img id="logoimg45" src="Logos/94.3radioone.png" alt="">
+                        <div class="logoline12"></div>
+                        <div class="logoline13"></div>
+                        <div class="logoline14"></div>
+                        <span id="logopatner9">MERCHANDISE PATNERS/LICENSEES</span>
+                        <img id="logoimg46" src="Logos/boldfit.png" alt="">
+                        <img id="logoimg47" src="Logos/chupps.png" alt="">
+                        <img id="logoimg48" src="Logos/cricketicons.png" alt="">
+                        <img id="logoimg49" src="Logos/centric.png" alt="">
+                        <img id="logoimg50" src="Logos/fancodeshop.png" alt="">
+                        <img id="logoimg51" src="Logos/instaxfunjifilm.png" alt="">
+                        <img id="logoimg52" src="Logos/rapoo.png" alt="">
+                        <img id="logoimg53" src="Logos/realcricket.png" alt="">
+                </div>
+                <div class="footer">
+                        <img class="footimg" src="Logos/mumbaiindians.png" alt="">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">Matches</a></li>
+                            <li><a href="#">MITV</a></li>
+                            <li><a href="#">Squad</a></li>
+                            <li><a href="#">Latest Updates</a></li>
+                            <li><a href="#">Gallery</a></li>
+                            <li><a href="#">Shop</a></li>
+                            <li><a href="#">Stadium</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">follow us</a></li>
+                            <img src="Logos/facebook.png" alt="">
+                            <img src="Logos/twitter.png" alt="">
+                            <img src="Logos/instagram.png" alt="">
+                            <img src="Logos/youtube.png" alt="">
+                            <img src="Logos/in.png" alt="">      
+                            <img src="Logos/whatsapp.png" alt="">
+                        </ul>
+                </div>
+                <div class="footer1">
+                        <span>Copyright Mumbai Indians</span>
+                        <span>All Rights Reserved</span>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">privacy policy</a>
+                        <a href="#">Ticket Disclaimar</a>
+                </div>
+
+
+
+    </body>
+</html>
+
